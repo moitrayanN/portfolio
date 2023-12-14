@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
+body {
+    background-color: rgba(255, 228, 196, 0.712);
+}
+
+nav {
+    background-color: rgb(254, 211, 216);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: rgb(77, 2, 124);
+    padding: 10px 60px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 4px solid rgb(77, 2, 124);
+    border-radius: 2pc;
+    column-gap: 20px;
+    font-weight: 600;
+    font-family: Poppins, sans-serif;
+    box-shadow: 4px 8px rgba(80, 25, 125, 0.673);
+    /* width: 79vw; */
+    /* position: fixed; */
+    /* top: 0px; */
+}
+
+nav ul {
+    display: flex;
+    left: -110%;
+}
+
+.menu1 {
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+.menu {
+    display: flex;
+    gap: 10px 3vw;
+    list-style: none;
+}
+
+.menu li a {
+    cursor: pointer;
+    text-decoration: none;
+    color: rgb(77, 2, 124);
+}
+
+.menu div a:visited {
+    color: blue;
+}
+
+.container1 {
+    display: grid;
+    font-size: larger;
+    column-gap: 30px;
+    background-color: rgba(197, 197, 197, 0.7);
+    justify-items: center;
+    padding: 10px 30px;
+    border: 4px solid rgb(0, 0, 0);
+    border-radius: 2pc;
+    margin-bottom: 20px;
+    box-shadow: 4px 8px rgba(24, 4, 41, 0.673);
+    /* width: 75vw; */
+    /* height: 500px; */
+}
+
+.contact {
+    width: auto;
+    background-color: rgb(254, 211, 216);
+    color: rgb(77, 2, 124);
+    display: grid;
+    padding: 10px 60px;
+    border: 4px solid rgb(77, 2, 124);
+    border-radius: 2pc;
+    margin-bottom: 20px;
+    box-shadow: 4px 8px rgba(80, 25, 125, 0.673);
+}
+
+.contact form div {
+    margin: 5px;
+}
+
+h3 {
+    padding-top: 0;
+}
+
+textarea {
+    background-color: rgba(255, 228, 196, 0.712);
+    border: 3px solid rgb(77, 2, 124);
+}
+
+input {
+    background-color: rgba(255, 228, 196, 0.712);
+    border: 3px solid rgb(77, 2, 124);
+}
+
+footer {
+    background-color: rgb(251, 191, 197);
+    background-color: rgba(197, 197, 197, 0.7);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 60px;
+    border: 4px solid black;
+    border-radius: 2pc;
+    margin-bottom: 20px;
+    font-family: Poppins, sans-serif;
+    box-shadow: 4px 8px rgba(24, 4, 41, 0.673);
+    /* flex-wrap: wrap; */
+}
+
+footer ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 20px;
+}
+
+footer div {
+    display: flex;
+    column-gap: 3vw;
+    font-weight: 600;
+}
+
+footer ul label {
+    cursor: pointer;
+    font-weight: 600;
+}
+
+footer ul label:hover {
+    opacity: 0.7;
+}
+
+.fa {
+    padding: 5px;
+    font-size: 30px;
+    width: 15px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 1pc;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+
+.fa-instagram {
+    background: rgb(255, 255, 255);
+    color: rgb(254, 36, 177);
+}
+
+.fa-linkedin {
+    background: rgb(51, 80, 167);
+    color: white;
+}
+
+.fa-google {
+    background: rgb(255, 255, 255);
+    color: red;
+}
+
+@media only screen and (max-width: 500px) {
+    .container1 {
+        grid-template-rows: repeat(2, 1fr);
+    }
+
+    #check:checked~ul {
+        left: 0%;
+    }
+
+    .menu1 {
+        display: block;
+        cursor: pointer;
+    }
+
+    nav ul {
+        position: fixed;
+        top: 69px;
+        width: 100%;
+        height: 100vh;
+        background-color: rgb(77, 2, 124);
+        font-weight: 800;
+        left: -115%;
+        flex-direction: column;
+        text-align: left;
+        transition: all 0.5s ease-in-out;
+    }
+
+    nav ul li a {
+        color: rgb(254, 211, 216) !important;
+    }
+
+    .contact>.message textarea {
+        width: 38vw;
+    }
+}
+
+@media only screen and (min-width: 500px) {
+    .container1 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* .contact > .message textarea {
+        width: minmax(64vw, 100px);
+    } */
+}
